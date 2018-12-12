@@ -5,52 +5,15 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>JAVASCRIPT GAME</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
-    <script src="main.js"></script>
 </head>
 <body>
-    <h1>Guess That Word!</h1>
-
-    <p id="lettersGuessed">Wins: </p>
-    <p id="lettersGuessed">Losses: </p>
+    <h1>Psychic Game</h1>
+    
+    <p id="wins">Wins: </p>
+    <p id="losses">Losses: </p>
+    <p id="guesses">Guesses Left: </p>
     <p id="lettersGuessed">Letters Guessed: </p>
     
-    <script>
-//creating an array of word options
-var words = ['beyonce', 'dogs', 'cats', 'bootcamp', 'coding', 'javascript', 'shopping', 'makeup', 'travel', 'gucci', 'ysl', 'shoes', 'purses', 'nails', 'nike', 'adidas']
-
-//variable to hold the guesses
-var guess = onkeydown(event)
-
-//picking word for the round
-var selectedWord = words[Math.floor(Math.random() * words.length)];
-
-//showing possible letters in answer 
-var answers = [];
-for (var i = 0; i < words.length; i++) {
-    answers[i] = "_";
-}
-
-//variable to hold the letters that still have to be guessed
-var remaining = selectedWord.length;
-
-//when I searched how to "start" the game, it mentioned using a while loop. not sure I did this right though
-while (remaining > 0) {
-    answers.join(" ");
-}
-
-for (var j = 0; j < selectedWord.length; j++) {
-    if(selectedWord[j] === guess) {
-        answers[j] = guess;
-        remaining--;
-    }
-}
-
-alert("The word is " + selectedWord)
-$(lettersGuessed.text) == onkeydown(event)
-
-//This doesn't run. I understand Javascript parts individually but putting everything together is a struggle. I spent way too long trying to code the Javascript (and also failed at using jQuery for the HTML)
-
-</script>
+    <script src="main.js"></script>
 </body>
 </html>
